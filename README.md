@@ -23,7 +23,7 @@ RESTAPI para el registro de transacciones y control de finanzas construida con R
 
 ```bash
 git clone https://github.com/mariaabonilla11/finances-app
-cd finances-app
+cd finances_app
 ```
 
 ### 2. Ejecutar imagen y correr contenedor 🐳
@@ -31,7 +31,7 @@ cd finances-app
 ### Construir imagen
 
 ```bash
-cd finances-app
+cd finances_app
 docker compose up --build
 ```
 
