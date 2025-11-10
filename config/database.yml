@@ -1,0 +1,26 @@
+# PostgreSQL configuration for Docker + Rails 7
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: password
+  host: db
+  port: 5432
+
+development:
+  <<: *default
+  database: finances_db
+
+test:
+  <<: *default
+  database: finances_test
+
+production:
+  <<: *default
+  database: finances_production
+  username: postgres
+  password: <%= ENV["DATABASE_PASSWORD"] || "password" %>
+  host: db
+  port: 5432
